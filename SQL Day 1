@@ -58,6 +58,20 @@ delete * from New_Customers_21 where Cust_id = 3 (deletes the entire row)
 
 Truncate table New_Customers_21
 
+Joins Basic :
+
+Inner Join : Its gives out only the common value
+Left and Right Join : Based upon the tables you join on left or right the value changes
+
+select * from customers join orders on customers.customerId = orders.customerId (Number of records 196)
+
+select * from customers left join orders on customers.customerId = orders.customerId (Number of records 203)
+
+select * from customers right join orders on customers.customerId = orders.customerId (Number of records 196)
+
+
+
+
 
 
 
