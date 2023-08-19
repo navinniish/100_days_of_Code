@@ -9,3 +9,5 @@
 ### = Days 61-70: Tableau Tutorial
 ### = Days 71-100: Machine Learning Tutorial
 
+Note : I use https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all for writing my SQL Queries.
+
