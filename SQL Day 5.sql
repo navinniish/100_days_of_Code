@@ -13,6 +13,7 @@ select last_day(current_date())  /*Gives the last day of the current month*/
 select monthname(current_date())  
 SELECT YEAROFWEEK(CURRENT_DATE);
 SELECT YEAROFWEEKISO(CURRENT_DATE);
+SELECT DATEDIFF(CURRENT_DATE, '2023-01-01') /* THIS FUNCTION GIVES THE DATE DIFFERENCE BETWEEN TWO STRINGS*/
 
 /*Some String Functions*/
 
