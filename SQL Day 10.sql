@@ -125,15 +125,51 @@ SELECT JSON_QUERY('{"name": "John", "age": 30}', '$.name') AS name; ---In this e
 
 ---Note that BQ having trillions of data must be read by using a timestamp
 
+/*
+Start with a Clear Goal:
+Clearly define your objective before writing any code. Understand what insights or results you want to obtain from your query. No
+
+Use Descriptive Names:
+Choose meaningful names for tables, columns, and aliases. This improves code readability and makes it easier for others to understand your queries.
+
+Use Comments:
+Add comments to explain complex parts of your code, the purpose of queries, and any assumptions you're making. This helps both you and others who read your code in the future.
+
+Minimize Data Scanned:
+BigQuery charges based on the amount of data processed. Use filters and WHERE clauses to limit the amount of data read from tables, especially when working with large datasets.
+
+*Avoid Using SELECT :
+Instead of selecting all columns with SELECT *, explicitly list the columns you need. This reduces unnecessary data transfer and can lead to more efficient query execution.
+
+Use Table Wildcards:
+When working with partitioned or time-series data, use table wildcards to query multiple tables at once. This can simplify queries and improve performance.
+
+Aggregate Thoughtfully:
+Use aggregate functions (e.g., SUM, COUNT, AVG) judiciously. Be aware of how grouping affects your results and choose appropriate grouping columns.
+
+Use Proper JOINs:
+Use JOINs to combine data from different tables. Understand the differences between INNER JOIN, LEFT JOIN, and other types of JOINs and choose the right one for your needs.
+
+Consider Subqueries and CTEs:
+Complex queries can benefit from breaking them down into subqueries or using Common Table Expressions (CTEs) for better organization and readability.
+
+Optimize ORDER BY:
+If you use ORDER BY, consider using it only when necessary. ORDER BY can be resource-intensive, especially for large datasets.
+
+Use Analytic Functions Wisely:
+Analytic functions (e.g., ROW_NUMBER, RANK, LAG) can be powerful for creating advanced analyses, but they can also impact performance. Use them with care.
+
+Test with LIMIT:
+When developing queries, use LIMIT to test your results before running the full query. This prevents accidentally running resource-intensive operations.
+
+Check Query Execution Plan:
+Use the Query Execution Plan to understand how your query is being executed. It can help identify potential bottlenecks or areas for optimization.
+
+Use BigQuery Documentation:
+Refer to BigQuery's official documentation for in-depth information about functions, best practices, and optimization techniques. 
 
 
-
-
-
-
-
--- Output: "John"
-
+BECAUSE NOTE THAT BQ IS FULL OF COSTS !!!! COSTS !!!! COSTS !!!!! So optimize your query and then use it wisely*/
 
 
 
